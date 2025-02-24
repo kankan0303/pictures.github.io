@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+  }
+  .w3-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  section {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0;
+  }
+  .mySlides {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black w3-padding">
+  <a href="home.html" class="w3-button w3-bar-item">Home</a>
+  <a href="picture.html" class="w3-button w3-bar-item">Picture</a>
+  <a href="us.html" class="w3-button w3-bar-item">Us</a>
+  <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section class="slideshow-container">
+  <img class="mySlides" src="DSC05617.JPG">
+  <img class="mySlides" src="DSC05512.JPG">
+  <img class="mySlides" src="DSC05472.JPG">
+</section>
+
+<!-- Back to Main Page Button -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="index.html" class="w3-button w3-blue w3-round">Back to Main Page</a>
+</div>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>

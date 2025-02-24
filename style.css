@@ -1,0 +1,15 @@
+img
+{
+    width:50%;
+    height:auto;
+}
+
+.image
+{
+    display: flex;
+    justify-content: center;
+}
+body
+{
+    background-color: lightslategray;
+}
